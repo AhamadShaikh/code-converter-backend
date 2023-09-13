@@ -5,6 +5,11 @@ const bodyParser = require("body-parser");
 
 const app = express();
 app.use(express.json());
+
+app.use(cors({
+    origin: "http://localhost:3000"
+}))
+
 app.use(bodyParser.json());
 
 const Port = process.env.PORT || 7000;
