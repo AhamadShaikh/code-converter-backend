@@ -1,15 +1,12 @@
 const express = require("express");
-require("dotenv").config();
 const axios = require("axios");
 const bodyParser = require("body-parser");
 const cors = require("cors")
 
 const app = express();
 app.use(express.json());
-
-app.use(cors({
-    origin: "http://localhost:3000"
-}))
+app.use(cors())
+require("dotenv").config();
 
 app.use(bodyParser.json());
 
